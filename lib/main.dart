@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
+
+import 'app_globals.dart';
 import 'features/home/screens/home_screen.dart';
 
 // env
@@ -25,8 +27,8 @@ Future<void> main() async {
   final user = NativebrikUser();
   await user.setProperties({
     'environment': kReleaseMode ? 'production' : 'development',
-    // 'email': 'user@example.com',
-    // 'name' : 'Aki Nakano',
+    'email': 'user@example.com',
+    'name': 'Aki Nakano',
   });
 
   runApp(ZenLockMockApp(nativebrik: nativebrik));
