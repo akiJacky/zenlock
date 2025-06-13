@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../app_globals.dart';
 
 /// 「習慣化ガイド」などのお知らせを表示するカード
 class HabitCard extends StatelessWidget {
@@ -9,6 +10,7 @@ class HabitCard extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(20),
+      key: AppGlobals.habitCardKey,
       decoration: BoxDecoration(
         color: scheme.surface,
         borderRadius: BorderRadius.circular(16),
